@@ -1,7 +1,8 @@
 import React from "react"
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+import { CookieBanner } from '@/components/cookie-banner'
+import { ConditionalAnalytics } from '@/components/conditional-analytics'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -36,10 +37,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className={`font-sans antialiased`}>
         {children}
-        <Analytics />
+        <CookieBanner />
+        <ConditionalAnalytics />
       </body>
     </html>
   )

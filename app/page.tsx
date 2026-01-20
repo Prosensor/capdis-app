@@ -1,7 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -22,6 +23,32 @@ import {
 
 export default function CapdisLandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  // Fonction pour gérer le smooth scroll avec offset pour le header
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, targetId: string) => {
+    e.preventDefault()
+    
+    // Fermer le menu mobile si ouvert
+    setMobileMenuOpen(false)
+    
+    // Attendre un peu pour que le menu se ferme avant de scroller
+    setTimeout(() => {
+      const element = document.getElementById(targetId)
+      
+      if (element) {
+        // Calculer l'offset pour le header sticky (hauteur du header + top bar)
+        // Le header fait environ 80px + top bar 40px = 120px
+        const headerOffset = 120
+        const elementPosition = element.getBoundingClientRect().top
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+        
+        window.scrollTo({
+          top: Math.max(0, offsetPosition), // S'assurer qu'on ne scroll pas en négatif
+          behavior: 'smooth'
+        })
+      }
+    }, mobileMenuOpen ? 300 : 0) // Délai si le menu mobile est ouvert
+  }
 
   return (
     <div className="min-h-screen bg-white text-[#1a5096]">
@@ -55,7 +82,11 @@ export default function CapdisLandingPage() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
-            <a href="#accueil" className="flex items-center">
+            <a 
+              href="#accueil" 
+              onClick={(e) => handleSmoothScroll(e, 'accueil')}
+              className="flex items-center"
+            >
               <Image
                 src="/images/logo-capdis.jpg"
                 alt="Groupe Capdis - Au service de la mesure"
@@ -68,23 +99,45 @@ export default function CapdisLandingPage() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-              <a href="#accueil" className="text-[#1a5096] font-medium hover:text-[#d4a528] transition-colors">
+              <a 
+                href="#accueil" 
+                onClick={(e) => handleSmoothScroll(e, 'accueil')}
+                className="text-[#1a5096] font-medium hover:text-[#d4a528] transition-colors"
+              >
                 Accueil
               </a>
-              <a href="#services" className="text-[#64748b] hover:text-[#d4a528] transition-colors">
+              <a 
+                href="#services" 
+                onClick={(e) => handleSmoothScroll(e, 'services')}
+                className="text-[#64748b] hover:text-[#d4a528] transition-colors"
+              >
                 Services
               </a>
-              <a href="#expertise" className="text-[#64748b] hover:text-[#d4a528] transition-colors">
+              <a 
+                href="#expertise" 
+                onClick={(e) => handleSmoothScroll(e, 'expertise')}
+                className="text-[#64748b] hover:text-[#d4a528] transition-colors"
+              >
                 Expertise
               </a>
-              <a href="#contact" className="text-[#64748b] hover:text-[#d4a528] transition-colors">
+              <a 
+                href="#contact" 
+                onClick={(e) => handleSmoothScroll(e, 'contact')}
+                className="text-[#64748b] hover:text-[#d4a528] transition-colors"
+              >
                 Contact
               </a>
             </nav>
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <Button className="bg-[#d4a528] hover:bg-[#b8922a] text-white font-semibold">
+              <Button 
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleSmoothScroll(e as any, 'contact')
+                }}
+                className="bg-[#d4a528] hover:bg-[#b8922a] text-white font-semibold"
+              >
                 Demander un devis
               </Button>
             </div>
@@ -102,19 +155,41 @@ export default function CapdisLandingPage() {
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
             <nav className="md:hidden pb-4 flex flex-col gap-4">
-              <a href="#accueil" className="text-[#1a5096] font-medium hover:text-[#d4a528] transition-colors">
+              <a 
+                href="#accueil" 
+                onClick={(e) => handleSmoothScroll(e, 'accueil')}
+                className="text-[#1a5096] font-medium hover:text-[#d4a528] transition-colors"
+              >
                 Accueil
               </a>
-              <a href="#services" className="text-[#64748b] hover:text-[#d4a528] transition-colors">
+              <a 
+                href="#services" 
+                onClick={(e) => handleSmoothScroll(e, 'services')}
+                className="text-[#64748b] hover:text-[#d4a528] transition-colors"
+              >
                 Services
               </a>
-              <a href="#expertise" className="text-[#64748b] hover:text-[#d4a528] transition-colors">
+              <a 
+                href="#expertise" 
+                onClick={(e) => handleSmoothScroll(e, 'expertise')}
+                className="text-[#64748b] hover:text-[#d4a528] transition-colors"
+              >
                 Expertise
               </a>
-              <a href="#contact" className="text-[#64748b] hover:text-[#d4a528] transition-colors">
+              <a 
+                href="#contact" 
+                onClick={(e) => handleSmoothScroll(e, 'contact')}
+                className="text-[#64748b] hover:text-[#d4a528] transition-colors"
+              >
                 Contact
               </a>
-              <Button className="bg-[#d4a528] hover:bg-[#b8922a] text-white font-semibold w-fit">
+              <Button 
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleSmoothScroll(e as any, 'contact')
+                }}
+                className="bg-[#d4a528] hover:bg-[#b8922a] text-white font-semibold w-fit"
+              >
                 Demander un devis
               </Button>
             </nav>
@@ -150,6 +225,10 @@ export default function CapdisLandingPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleSmoothScroll(e as any, 'services')
+                }}
                 className="bg-[#d4a528] hover:bg-[#b8922a] text-white font-semibold text-lg px-8"
               >
                 Découvrir nos services
@@ -158,6 +237,10 @@ export default function CapdisLandingPage() {
               <Button
                 size="lg"
                 variant="outline"
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleSmoothScroll(e as any, 'contact')
+                }}
                 className="border-white text-white hover:bg-white/10 text-lg px-8 bg-transparent"
               >
                 Nous contacter
@@ -424,6 +507,10 @@ export default function CapdisLandingPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
+              onClick={(e) => {
+                e.preventDefault()
+                handleSmoothScroll(e as any, 'contact')
+              }}
               className="bg-[#d4a528] hover:bg-[#b8922a] text-white font-semibold text-lg px-8"
             >
               Demander un devis gratuit
@@ -582,22 +669,38 @@ export default function CapdisLandingPage() {
               <h5 className="font-semibold text-white mb-4">Navigation</h5>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#accueil" className="text-white/70 hover:text-[#d4a528] transition-colors">
+                  <a 
+                    href="#accueil" 
+                    onClick={(e) => handleSmoothScroll(e, 'accueil')}
+                    className="text-white/70 hover:text-[#d4a528] transition-colors"
+                  >
                     Accueil
                   </a>
                 </li>
                 <li>
-                  <a href="#services" className="text-white/70 hover:text-[#d4a528] transition-colors">
+                  <a 
+                    href="#services" 
+                    onClick={(e) => handleSmoothScroll(e, 'services')}
+                    className="text-white/70 hover:text-[#d4a528] transition-colors"
+                  >
                     Services
                   </a>
                 </li>
                 <li>
-                  <a href="#expertise" className="text-white/70 hover:text-[#d4a528] transition-colors">
+                  <a 
+                    href="#expertise" 
+                    onClick={(e) => handleSmoothScroll(e, 'expertise')}
+                    className="text-white/70 hover:text-[#d4a528] transition-colors"
+                  >
                     Expertise
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="text-white/70 hover:text-[#d4a528] transition-colors">
+                  <a 
+                    href="#contact" 
+                    onClick={(e) => handleSmoothScroll(e, 'contact')}
+                    className="text-white/70 hover:text-[#d4a528] transition-colors"
+                  >
                     Contact
                   </a>
                 </li>
@@ -608,19 +711,14 @@ export default function CapdisLandingPage() {
               <h5 className="font-semibold text-white mb-4">Légal</h5>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="text-white/70 hover:text-[#d4a528] transition-colors">
+                  <Link href="/mentions-legales" className="text-white/70 hover:text-[#d4a528] transition-colors">
                     Mentions légales
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-[#d4a528] transition-colors">
+                  <Link href="/politique-confidentialite" className="text-white/70 hover:text-[#d4a528] transition-colors">
                     Politique de confidentialité
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-white/70 hover:text-[#d4a528] transition-colors">
-                    CGV
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
