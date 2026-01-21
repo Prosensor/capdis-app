@@ -73,77 +73,73 @@ export default function PolitiqueConfidentialitePage() {
           <section>
             <h2 className="text-2xl font-bold text-[#1a5096] mb-4">2. Données collectées</h2>
             <p className="mb-4">
-              Notre site web ne nécessite pas de création de compte ni d'authentification. Nous collectons uniquement 
-              les données que vous choisissez de nous transmettre volontairement via le formulaire de contact.
+              Notre site web est un site vitrine simple qui présente les informations de contact de notre entreprise. 
+              Nous ne collectons aucune donnée personnelle directement via ce site web.
             </p>
-            <p className="mb-4">Les données personnelles que nous pouvons collecter sont :</p>
+            <p className="mb-4">Les seules données collectées sont :</p>
             <ul className="list-disc ml-6 mt-4 space-y-2">
-              <li><strong className="text-[#1a5096]">Données de contact :</strong> nom, prénom, adresse email, numéro de téléphone (uniquement si vous remplissez et soumettez le formulaire de contact)</li>
-              <li><strong className="text-[#1a5096]">Données professionnelles :</strong> nom de l'entreprise (uniquement si vous remplissez le formulaire de contact)</li>
-              <li><strong className="text-[#1a5096]">Données de communication :</strong> contenu des messages que vous nous envoyez via le formulaire de contact</li>
-              <li><strong className="text-[#1a5096]">Données de navigation :</strong> adresse IP, données de connexion collectées automatiquement par notre hébergeur et notre service d'analyse (Vercel Analytics) pour des raisons techniques et statistiques</li>
+              <li><strong className="text-[#1a5096]">Données de navigation techniques :</strong> adresse IP, données de connexion collectées automatiquement par notre hébergeur (Vercel) pour des raisons techniques et de sécurité</li>
+              <li><strong className="text-[#1a5096]">Données statistiques anonymisées :</strong> via Vercel Analytics (uniquement si vous acceptez les cookies analytiques), pour comprendre comment les visiteurs utilisent notre site web de manière anonymisée</li>
             </ul>
             <p className="mt-4 text-sm text-[#94a3b8]">
-              <strong>Important :</strong> Nous ne collectons aucune donnée d'identification personnelle sans votre action explicite. 
-              La navigation sur notre site ne nécessite aucune inscription ni authentification.
+              <strong>Important :</strong> Ce site ne contient aucun formulaire de contact. Si vous nous contactez par email ou téléphone 
+              (via les liens présents sur le site), ces communications sont gérées en dehors du site web et ne font pas partie 
+              du traitement de données décrit dans cette politique.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-[#1a5096] mb-4">3. Finalités du traitement</h2>
-            <p>Vos données personnelles sont traitées uniquement pour les finalités suivantes :</p>
+            <p>Les données techniques collectées sont utilisées uniquement pour les finalités suivantes :</p>
             <ul className="list-disc ml-6 mt-4 space-y-2">
-              <li><strong className="text-[#1a5096]">Répondre à vos demandes :</strong> traiter et répondre aux messages que vous nous envoyez via le formulaire de contact</li>
-              <li><strong className="text-[#1a5096]">Gérer la relation commerciale :</strong> établir des devis et gérer la relation client suite à votre demande</li>
-              <li><strong className="text-[#1a5096]">Analyse statistique :</strong> comprendre comment les visiteurs utilisent notre site web via Vercel Analytics (avec votre consentement pour les cookies analytiques)</li>
-              <li><strong className="text-[#1a5096]">Sécurité technique :</strong> assurer le bon fonctionnement et la sécurité de notre site web</li>
-              <li><strong className="text-[#1a5096]">Obligations légales :</strong> respecter nos obligations légales et réglementaires</li>
+              <li><strong className="text-[#1a5096]">Sécurité technique :</strong> assurer le bon fonctionnement et la sécurité de notre site web, prévenir les abus et les attaques</li>
+              <li><strong className="text-[#1a5096]">Analyse statistique anonymisée :</strong> comprendre comment les visiteurs utilisent notre site web via Vercel Analytics (uniquement si vous acceptez les cookies analytiques). Ces données sont anonymisées et ne permettent pas de vous identifier personnellement</li>
+              <li><strong className="text-[#1a5096]">Obligations légales :</strong> respecter nos obligations légales et réglementaires en matière de conservation des logs techniques</li>
             </ul>
             <p className="mt-4 text-sm text-[#94a3b8]">
-              <strong>Note :</strong> Nous n'utilisons pas vos données pour des communications marketing non sollicitées. 
-              Toute communication commerciale ne sera envoyée que dans le cadre de la réponse à votre demande initiale.
+              <strong>Note :</strong> Ce site étant un simple site vitrine, nous ne collectons pas de données personnelles 
+              identifiables via le site web lui-même. Les communications par email ou téléphone sont gérées séparément 
+              et ne font pas partie du traitement décrit dans cette politique.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-[#1a5096] mb-4">4. Base légale du traitement</h2>
-            <p>Le traitement de vos données personnelles est fondé sur :</p>
+            <p>Le traitement des données techniques collectées est fondé sur :</p>
             <ul className="list-disc ml-6 mt-4 space-y-2">
-              <li><strong className="text-[#1a5096]">Votre consentement</strong> pour les cookies analytiques (via la bannière de cookies)</li>
-              <li><strong className="text-[#1a5096]">L'exécution de mesures précontractuelles</strong> : lorsque vous nous contactez via le formulaire, vous initiez une démarche précontractuelle et nous traitons vos données pour y répondre</li>
-              <li><strong className="text-[#1a5096]">Notre intérêt légitime</strong> pour assurer la sécurité technique du site et analyser le trafic (données de navigation anonymisées)</li>
-              <li><strong className="text-[#1a5096]">Le respect d'obligations légales</strong> auxquelles nous sommes soumis (conservation des données comptables, etc.)</li>
+              <li><strong className="text-[#1a5096]">Votre consentement</strong> pour les cookies analytiques (via la bannière de cookies qui s'affiche lors de votre première visite)</li>
+              <li><strong className="text-[#1a5096]">Notre intérêt légitime</strong> pour assurer la sécurité technique du site, prévenir les abus et analyser le trafic de manière anonymisée</li>
+              <li><strong className="text-[#1a5096]">Le respect d'obligations légales</strong> auxquelles nous sommes soumis en matière de conservation des logs techniques pour des raisons de sécurité</li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-[#1a5096] mb-4">5. Conservation des données</h2>
             <p>
-              Nous conservons vos données personnelles uniquement pendant la durée nécessaire aux finalités 
+              Les données techniques collectées sont conservées uniquement pendant la durée nécessaire aux finalités 
               pour lesquelles elles ont été collectées :
             </p>
             <ul className="list-disc ml-6 mt-4 space-y-2">
-              <li><strong className="text-[#1a5096]">Données du formulaire de contact :</strong> 3 ans à compter de la dernière interaction, sauf si une relation commerciale s'établit</li>
-              <li><strong className="text-[#1a5096]">Données clients :</strong> durée de la relation contractuelle + 10 ans pour les obligations comptables et fiscales</li>
-              <li><strong className="text-[#1a5096]">Données de navigation (Analytics) :</strong> conservées par Vercel Analytics selon leur politique de conservation (généralement 13 mois maximum)</li>
-              <li><strong className="text-[#1a5096]">Données techniques (logs serveur) :</strong> conservées par notre hébergeur pour des raisons de sécurité, généralement 12 mois maximum</li>
+              <li><strong className="text-[#1a5096]">Données de navigation (Analytics) :</strong> conservées par Vercel Analytics selon leur politique de conservation (généralement 13 mois maximum). Ces données sont anonymisées et ne permettent pas de vous identifier</li>
+              <li><strong className="text-[#1a5096]">Données techniques (logs serveur) :</strong> conservées par notre hébergeur (Vercel) pour des raisons de sécurité et de fonctionnement technique, généralement 12 mois maximum</li>
             </ul>
             <p className="mt-4 text-sm text-[#94a3b8]">
-              Au-delà de ces durées, vos données sont supprimées ou anonymisées de manière sécurisée.
+              Au-delà de ces durées, les données sont automatiquement supprimées ou anonymisées de manière sécurisée 
+              par nos prestataires techniques.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-[#1a5096] mb-4">6. Destinataires des données</h2>
-            <p>Vos données personnelles peuvent être communiquées à :</p>
+            <p>Les données techniques collectées peuvent être communiquées à :</p>
             <ul className="list-disc ml-6 mt-4 space-y-2">
-              <li><strong className="text-[#1a5096]">Nos collaborateurs :</strong> uniquement les personnes autorisées et nécessaires pour traiter votre demande</li>
-              <li><strong className="text-[#1a5096]">Vercel Inc. :</strong> notre hébergeur et fournisseur du service d'analyse (Vercel Analytics) - situé aux États-Unis, conforme au RGPD via des garanties appropriées</li>
+              <li><strong className="text-[#1a5096]">Vercel Inc. :</strong> notre hébergeur et fournisseur du service d'analyse (Vercel Analytics) - situé aux États-Unis, conforme au RGPD via des garanties appropriées (clauses contractuelles types)</li>
               <li><strong className="text-[#1a5096]">Les autorités compétentes :</strong> uniquement en cas d'obligation légale ou de réquisition judiciaire</li>
             </ul>
             <p className="mt-4">
-              <strong>Important :</strong> Nous ne vendons jamais vos données personnelles à des tiers à des fins commerciales. 
-              Nous ne partageons vos données qu'avec les prestataires techniques strictement nécessaires au fonctionnement du site.
+              <strong>Important :</strong> Nous ne vendons jamais vos données à des tiers à des fins commerciales. 
+              Nous ne partageons les données qu'avec notre prestataire technique (Vercel) strictement nécessaire 
+              au fonctionnement et à l'hébergement du site.
             </p>
           </section>
 

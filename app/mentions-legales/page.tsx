@@ -73,7 +73,10 @@ export default function MentionsLegalesPage() {
             <h2 className="text-2xl font-bold text-[#1a5096] mb-4">4. Propriété intellectuelle</h2>
             <p>
               L'ensemble du contenu de ce site (textes, images, logos, graphismes, etc.) est la propriété exclusive de CAPDIS SARL, 
-              sauf mention contraire. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie 
+              sauf mention contraire. Ce site est un site vitrine présentant les informations de contact de notre entreprise.
+            </p>
+            <p className="mt-4">
+              Toute reproduction, représentation, modification, publication, adaptation de tout ou partie 
               des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable 
               de CAPDIS SARL.
             </p>
@@ -82,12 +85,17 @@ export default function MentionsLegalesPage() {
           <section>
             <h2 className="text-2xl font-bold text-[#1a5096] mb-4">5. Protection des données personnelles</h2>
             <p>
-              Les informations collectées sur ce site sont traitées conformément à notre politique de confidentialité. 
-              Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, 
-              de rectification, de suppression et d'opposition aux données personnelles vous concernant.
+              Ce site web est un site vitrine simple qui ne collecte pas de données personnelles identifiables directement 
+              via le site. Seules des données techniques anonymisées peuvent être collectées via notre service d'analyse 
+              (Vercel Analytics) avec votre consentement.
             </p>
             <p className="mt-4">
-              Pour exercer ces droits, vous pouvez nous contacter à l'adresse suivante :{" "}
+              Les informations relatives au traitement des données sont détaillées dans notre politique de confidentialité. 
+              Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, 
+              de rectification, de suppression et d'opposition aux données vous concernant.
+            </p>
+            <p className="mt-4">
+              Pour exercer ces droits ou pour toute question concernant vos données, vous pouvez nous contacter à l'adresse suivante :{" "}
               <a href="mailto:contact@capdis.lu" className="text-[#d4a528] hover:underline">
                 contact@capdis.lu
               </a>
@@ -97,17 +105,22 @@ export default function MentionsLegalesPage() {
           <section>
             <h2 className="text-2xl font-bold text-[#1a5096] mb-4">6. Cookies</h2>
             <p>
-              Ce site utilise des cookies pour améliorer l'expérience utilisateur et analyser le trafic. 
-              En continuant à naviguer sur ce site, vous acceptez l'utilisation de cookies conformément à notre politique de confidentialité.
+              Ce site utilise des cookies analytiques (via Vercel Analytics) pour comprendre comment les visiteurs 
+              utilisent notre site web de manière anonymisée. Ces cookies nécessitent votre consentement et vous pouvez 
+              les accepter ou les refuser via la bannière de cookies qui s'affiche lors de votre première visite.
+            </p>
+            <p className="mt-4">
+              Pour plus d'informations sur l'utilisation des cookies, consultez notre politique de confidentialité.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-[#1a5096] mb-4">7. Responsabilité</h2>
             <p>
+              Ce site web est un site vitrine présentant les informations de contact de CAPDIS SARL. 
               CAPDIS SARL s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. 
               Toutefois, CAPDIS SARL ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations 
-              mises à disposition sur ce site.
+              mises à disposition.
             </p>
             <p className="mt-4">
               CAPDIS SARL ne pourra être tenue responsable des dommages directs ou indirects résultant de l'utilisation 
